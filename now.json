@@ -1,0 +1,25 @@
+{
+    "name": "Redux Observable Example",
+    "alias": "redux-observable-example.now.sh",
+    "version": 2,
+    "builds": [
+        { 
+            "src": "next.config.js", 
+            "use": "@now/next" 
+        }
+    ],
+    "routes": [
+        {
+            "src":"/.*",
+            "headers": { 
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "X-Requested-With, Content-Type, Accept",
+                "cache-control": "immutable,max-age=3600",
+                "Accept-Encoding": "br",
+                "Service-Worker-Allowed": "/"
+            } 
+        }
+    ],
+    "regions": ["all"]
+}
